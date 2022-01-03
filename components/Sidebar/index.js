@@ -8,7 +8,6 @@ const Sidebar = ({isOpen,toggle}) => {
         <CloseIcon />
       </Icon>
       <LogoWrapper>
-        <Image src="/LogoCarcara.png" width={70} height={70} />
       </LogoWrapper>
       <SidebarWrapper>
         <SidebarMenu>

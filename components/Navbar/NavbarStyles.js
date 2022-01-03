@@ -39,17 +39,33 @@ export const LogoWrapper = styled.div`
 `
 
 export const MobileIcon = styled.div`
-  display: none;
-  
-  @media screen and (max-width: 768px) {
-    display: block;
-    font-size: 27.5px;
-    cursor: pointer;
-    color: #fff;
-    width: 50px;
-    height: 27.5px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-}
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 27.5px;
+	cursor: pointer;
+	color: #fff;
+	width: auto;
+	height: 27.5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`
+export const Badge = styled.div`
+	color: #F1F2F3;
+	font-size: 12px;
+	font-weight: 600;
+	background-color: #13131A;
+
+	align-self: flex-start;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
 `

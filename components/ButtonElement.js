@@ -1,21 +1,29 @@
 import styled from "styled-components";
 
 export const Button = styled.div`
-    border-radius: 50px;
-    background: #01BF71;
-    white-space: nowrap;
-    padding: 14px  48px;
-    color: #010606;
+    align-self: flex-start;
+
+    background: #13131A;
+    color: #E6E6E6;
+    border-radius: 16px;
+    padding: 14px 48px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
     font-size: 20px;
+    font-weight: 600;
+    white-space: nowrap;
     outline: none;
     border: none;
     cursor: pointer;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.2s ease-in-out;
+
+    transition: all 0.5s ease-in-out;
 
     &:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
+			color: #13131A;
+			background: #D47734;
+    }
 `
