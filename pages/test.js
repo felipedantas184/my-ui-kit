@@ -42,9 +42,9 @@ const iPhonesList = [
  */
 
 export async function getStaticProps() {
-  const FirebaseProducts = await getDocs(collection(fireDB, "products"));
+  const firebaseProducts = await getDocs(collection(fireDB, "products"));
 	const products = []
-	FirebaseProducts.forEach((doc) => {
+	firebaseProducts.forEach((doc) => {
 	const obj = {
 		id: doc.id,
 		...doc.data()

@@ -5,7 +5,7 @@ import { ImageWrapper } from '../UsefulComponents';
 
 const IphoneCard = ({product}) => {
 	return (
-		<Link href={'/products'} passHref>
+		<Link href={'/' + product.id} passHref>
 			<Card>
 				<ImageWrapper>
 					<Image src={product.imageURL} alt={product.name} layout='fill'  />

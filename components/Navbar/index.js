@@ -5,8 +5,11 @@ import { FaBars, FaShoppingCart } from 'react-icons/fa';
 import { MobileIcon, LogoWrapper, NavbarContainer, NavbarLogo, NavbarWrapper, Badge } from "./NavbarStyles";
 import { animateScroll as scroll } from 'react-scroll';
 import Router from 'next/router';
+import { useSelector } from 'react-redux'
 
 const Navbar = ({ toggle, cart }) => {
+	const {cartItems} = useSelector(state=>state.cartReducer) 
+
 	const [scrollNav, setScrollNav] = useState(false)
   const changeNav = () => {
     if(window.scrollY >= 60) {
@@ -46,10 +49,11 @@ const Navbar = ({ toggle, cart }) => {
 				<MobileIcon onClick={proccessToCartHandler} >
 				{cart.loading ? (
 						<FaShoppingCart color='#D47734' />
-					) : cart.data.total_items > 0 ? (
+					) : cartItems.length > 0 ? (
 					<>
 						<FaShoppingCart color='#D47734' />
-						<Badge>{cart.data.total_items}</Badge>
+						{/**<Badge>{cart.data.total_items}</Badge>*/}
+						<Badge>{cartItems.length}</Badge>
 					</>
 				) : (
 					<FaShoppingCart color='#D47734' />

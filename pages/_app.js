@@ -4,6 +4,8 @@ import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
 import Router from 'next/router'
 import { useEffect } from 'react'
+import { Provider } from 'react-redux'
+import { store } from '../redux/store'
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
@@ -19,9 +21,11 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
+    <Provider store={store} >
     <StoreProvider>
         <Component {...pageProps} />
     </StoreProvider>
+    </Provider>
   )
 }
 
